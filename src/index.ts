@@ -1,3 +1,3 @@
-import showPokemonList from "./modules/pokemonList.js";
+import showPokemonList from "./modules/pokemonList/pokemonList.js";
 
 showPokemonList();
