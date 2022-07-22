@@ -1,5 +1,5 @@
-import pokedexInfo from "./pokedexInfo.js";
-import PokemonList from "../components/interfaces.js";
+import pokedexInfo from "../info/pokedexInfo.js";
+import PokemonList from "../../components/interfaces.js";
 
 const showPokemonList = async () => {
   const resources = await fetch(
