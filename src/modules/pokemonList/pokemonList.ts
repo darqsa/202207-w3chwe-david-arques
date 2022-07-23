@@ -3,11 +3,11 @@ import pokemonListURL from "../apiUrls/pokemonListUrl.js";
 
 const pokemonList = async () => {
   const list: PokemonList = await pokemonListURL();
-  const pokeList = [];
+  const pokeListUrl: string[] = [];
   for (let i = 0; i < list.results.length; i += 1) {
-    pokeList.push(list.results[i].url);
+    pokeListUrl.push(list.results[i].url);
   }
-  return pokeList;
+  return pokeListUrl;
 };
 
 export default pokemonList;
