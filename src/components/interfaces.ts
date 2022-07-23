@@ -1,8 +1,20 @@
-interface PokemonList {
+export interface PokemonList {
   count: number;
   next: string;
   previous: string;
-  results: object[];
+  results: [
+    {
+      name: string;
+      url: string;
+    }
+  ];
 }
 
-export default PokemonList;
+export interface PokemonInfo {
+  name: string;
+  id: number;
+  sprite: string;
+  type: string[];
+  height: number;
+  weight: number;
+}
