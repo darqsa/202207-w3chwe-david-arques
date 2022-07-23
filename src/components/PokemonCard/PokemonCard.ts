@@ -1,14 +1,16 @@
+import pokedexInfo from "../../modules/info/pokedexInfo.js";
 import pokemonStats from "../../modules/pokemon/pokemon.js";
 
 const renderPokemonCard = async () => {
-  const pokemon = await pokemonStats(0);
+  const pokemon = await pokemonStats(pokedexInfo.pokemonRender.current);
+
   const pokemonCardHeader = () => {
     const pokemonName = document.createElement("h1");
     document.querySelector(".card-container__header").appendChild(pokemonName);
     pokemonName.textContent = `#${pokemon.id} - ${pokemon.name}`;
     pokemonName.className = "card-container__pokemon-name";
   };
-  const cardContainer = ".card-container__container";
+
   const pokemonCardImages = () => {
     const pokemonSprite = document.createElement("img");
     document
@@ -16,6 +18,7 @@ const renderPokemonCard = async () => {
       .appendChild(pokemonSprite);
     pokemonSprite.className = "card-container__image";
     pokemonSprite.src = `${pokemon.sprite}`;
+    pokemonSprite.alt = `pokemon ${pokemon.name} image`;
   };
 
   const pokemonCardStats = () => {
