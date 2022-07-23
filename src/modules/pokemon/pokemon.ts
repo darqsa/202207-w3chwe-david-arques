@@ -7,7 +7,7 @@ const pokemonStats = async (pokemonName: string, current: number) => {
     name: pokemonName,
     id: pokemonInfo.id,
     sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonInfo.id}.png`,
-    type: pokemonInfo.types,
+    type: [pokemonInfo.types],
     height: pokemonInfo.height,
     weight: pokemonInfo.weight,
   };
