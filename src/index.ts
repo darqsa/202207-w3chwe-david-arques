@@ -1,2 +1,4 @@
+import currentPokemon from "./modules/apiUrls/currentPokemonUrl.js";
+
 // document.querySelector(".card-container__pokemon-name").textContent =
-//   pokemonList[0].name;
+currentPokemon(4);
