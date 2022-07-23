@@ -14,7 +14,7 @@ export interface PokemonInfo {
   name: string;
   id: number;
   sprite: string;
-  type: string[];
+  type: object[];
   height: number;
   weight: number;
 }
