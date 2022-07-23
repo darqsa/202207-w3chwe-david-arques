@@ -1,14 +1,12 @@
-import pokedexInfo from "../info/pokedexInfo.js";
-import PokemonList from "../../components/interfaces.js";
+import apiURL from "../apiUrl/apiUrl.js";
 
-const showPokemonList = async () => {
-  const resources = await fetch(
-    `${pokedexInfo.pokemonList.url}?offset=${pokedexInfo.pokemonList.urlOffset}&limit=${pokedexInfo.pokemonList.urlOffsetLimit}`
-  );
-  const shownList = await resources.json();
-  const tenPokemon: PokemonList = shownList.results;
-
-  return tenPokemon;
+const pokemonList = async () => {
+  const list = await apiURL();
+  const pokeList = [];
+  for (let i = 0; i < list.results.length; i += 1) {
+    pokeList.push([list.results[i].name, list.results[i].url]);
+  }
+  return pokeList;
 };
 
-export default showPokemonList;
+export default pokemonList;
