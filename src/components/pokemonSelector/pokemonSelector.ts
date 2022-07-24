@@ -21,9 +21,10 @@ const renderPokemonSelector = async () => {
     document
       .querySelector(`#pokemon${i}`)
       .addEventListener("click", async () => {
-        pokedexInfo.pokemonRender.current = (currentPokemon.id - 1) % 10;
-        await unRenderPokemonCard();
-        await renderPokemonCard();
+        pokedexInfo.pokemonRender.current =
+          (currentPokemon.id - 1) % pokedexInfo.pokemonList.urlOffsetLimit;
+        unRenderPokemonCard();
+        renderPokemonCard();
       });
   }
 };
