@@ -1,6 +1,6 @@
 import { PokemonInfo, PokemonList } from "../../components/interfaces.js";
-import PokemonListURL from "../apiUrls/pokemonListUrl.js";
-import currentPokemon from "../apiUrls/currentPokemonUrl.js";
+import PokemonListURL from "../pokemonListUrl/pokemonListUrl.js";
+import currentPokemon from "../pokemonListUrl/currentPokemon/currentPokemon.js";
 
 const pokemonStats = async (current: number) => {
   const pokemonInfo = await currentPokemon(current);
@@ -10,7 +10,7 @@ const pokemonStats = async (current: number) => {
     const currentPokemonName = nameList.results[current].name;
     return currentPokemonName;
   };
-  const currentPokemonName = await pokemonName();
+  const currentName = await pokemonName();
 
   const pokemonTypes = () => {
     let types: string;
@@ -31,8 +31,8 @@ const pokemonStats = async (current: number) => {
     return abilities;
   };
 
-  const pokemon: PokemonInfo = await {
-    name: currentPokemonName[0].toUpperCase() + currentPokemonName.slice(1),
+  const pokemon: PokemonInfo = {
+    name: currentName[0].toUpperCase() + currentName.slice(1),
     id: pokemonInfo.id,
     sprite: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemonInfo.id}.png`,
     type: pokemonTypes(),
