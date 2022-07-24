@@ -8,5 +8,13 @@
   }
   &__list-image {
     height: 75px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+    &:hover {
+      box-shadow: 1px 0px 5px rgba(0, 0, 0, 0.2);
+      color: black;
+      background-color: #dadada;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
   }
 }

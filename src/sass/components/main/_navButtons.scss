@@ -1,5 +1,29 @@
 .page-selector {
-  position: absolute;
-  top: 780px;
-  left: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 40px;
+  padding-top: 20px;
+  &__button {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
+    height: 40px;
+    width: 75px;
+    color: white;
+    background-color: rgb(108, 108, 108);
+    font-family: "Fira Sans", sans-serif;
+    font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: black;
+      background-color: white;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
+  }
+  &__actual-page {
+    padding: 0 10px;
+    font-weight: bold;
+    font-size: larger;
+  }
 }

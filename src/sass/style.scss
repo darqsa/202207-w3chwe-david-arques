@@ -4,6 +4,8 @@
 @use "components/aside/aside";
 @use "components/main/statistics";
 @use "components/main/navButtons";
+@use "components/main/main";
+@use "components/main/checkbox";
 
 * {
   box-sizing: border-box;
@@ -12,4 +14,5 @@
 }
 html {
   font-family: "Fira Sans", sans-serif;
+  background-color: #e0e0e0;
 }
