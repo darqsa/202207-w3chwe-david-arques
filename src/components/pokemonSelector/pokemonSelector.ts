@@ -1,5 +1,5 @@
 import pokemonStats from "../../modules/pokemon/pokemon.js";
-import pokemonList from "../../modules/pokemonList/pokemonList.js";
+import pokemonList from "../../modules/finalPokemonList/finalPokemonList.js";
 
 const renderPokemonSelector = async () => {
   const list: string[] = await pokemonList();
