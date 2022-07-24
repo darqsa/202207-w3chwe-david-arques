@@ -1,6 +1,7 @@
 .page-selector {
   display: flex;
   justify-content: center;
+  align-items: center;
   padding-right: 40px;
   &__button {
     border: 1px solid rgba(0, 0, 0, 0.2);
@@ -11,6 +12,13 @@
     background-color: rgb(108, 108, 108);
     font-family: "Fira Sans", sans-serif;
     font-weight: bold;
+    transition: 0.2s;
+    cursor: pointer;
+    &:hover {
+      color: black;
+      background-color: white;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+    }
   }
   &__actual-page {
     padding: 0 10px;
