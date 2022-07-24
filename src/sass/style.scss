@@ -2,6 +2,8 @@
 @use "components/appContainer/appContainer";
 @use "components/main/article";
 @use "components/aside/aside";
+@use "components/main/statistics";
+@use "components/main/navButtons";
 
 * {
   box-sizing: border-box;
