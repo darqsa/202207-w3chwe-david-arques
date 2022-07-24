@@ -14,3 +14,14 @@
     font-size: larger;
   }
 }
+@media (min-width: 700px) {
+  .card-container {
+    &__statistics-container {
+      align-self: center;
+      justify-content: space-around;
+      height: 70%;
+      font-size: 25px;
+      padding: 30px;
+    }
+  }
+}
