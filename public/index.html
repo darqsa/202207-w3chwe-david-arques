@@ -13,7 +13,6 @@
     <div class="app-container">
       <main class="card-container">
         <header class="card-container__header">
-          <h1 class="card-container__pokemon-name"></h1>
           <input
             type="checkbox"
             class="card-container__button"
@@ -22,7 +21,6 @@
         </header>
         <article class="card-container__container">
           <div class="card-container__images-container">
-            <img src="" alt="" class="card-container__image" />
             <img
               src=""
               alt=""
@@ -39,16 +37,16 @@
             <img src="" alt="" class="card-container__pokemon-type" />
           </div>
           <ul class="card-container__statistics-container">
-            <li class="card-container__statistic"></li>
-            <li class="card-container__statistic"></li>
-            <li class="card-container__statistic"></li>
-            <li class="card-container__statistic"></li>
+            <li class="card-container__statistic" id="stat1"></li>
+            <li class="card-container__statistic" id="stat2"></li>
+            <li class="card-container__statistic" id="stat3"></li>
+            <li class="card-container__statistic" id="stat4"></li>
           </ul>
-          <p class="card-container__pokemon-text"></p>
         </article>
       </main>
       <aside class="selector-container">
         <ol class="selector-container__list">
+          <li class="selector-container__list-item" id="pokemon0"></li>
           <li class="selector-container__list-item" id="pokemon1"></li>
           <li class="selector-container__list-item" id="pokemon2"></li>
           <li class="selector-container__list-item" id="pokemon3"></li>
@@ -58,7 +56,6 @@
           <li class="selector-container__list-item" id="pokemon7"></li>
           <li class="selector-container__list-item" id="pokemon8"></li>
           <li class="selector-container__list-item" id="pokemon9"></li>
-          <li class="selector-container__list-item" id="pokemon10"></li>
         </ol>
       </aside>
       <nav class="page-selector">

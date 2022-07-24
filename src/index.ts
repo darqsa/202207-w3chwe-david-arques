@@ -1,6 +1,5 @@
-import currentPokemon from "./modules/apiUrls/currentPokemonUrl.js";
-import pokemonStats from "./modules/pokemon/pokemon.js";
+import renderPokemonCard from "./components/pokemonCards/pokemonCards.js";
+import renderPokemonSelector from "./components/pokemonSelector/pokemonSelector.js";
 
-// document.querySelector(".card-container__pokemon-name").textContent =
-currentPokemon(4);
-pokemonStats("hola", 0);
+renderPokemonCard();
+renderPokemonSelector();

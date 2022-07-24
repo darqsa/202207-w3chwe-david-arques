@@ -17,4 +17,5 @@ export interface PokemonInfo {
   type: object[];
   height: number;
   weight: number;
+  abilities: object[];
 }
