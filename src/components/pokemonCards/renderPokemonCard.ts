@@ -1,5 +1,5 @@
 import pokedexInfo from "../../modules/info/pokedexInfo.js";
-import pokemonStats from "../../modules/pokemon/pokemon.js";
+import pokemonStats from "../../modules/pokemonStats/pokemonStats.js";
 
 const renderPokemonCard = async () => {
   const pokemon = await pokemonStats(pokedexInfo.pokemonRender.current);

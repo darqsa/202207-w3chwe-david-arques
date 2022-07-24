@@ -1,5 +1,5 @@
 import { PokemonList } from "../../components/interfaces.js";
-import pokemonListURL from "../apiUrls/pokemonListUrl.js";
+import pokemonListURL from "../pokemonListUrl/pokemonListUrl.js";
 
 const pokemonList = async () => {
   const list: PokemonList = await pokemonListURL();

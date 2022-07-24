@@ -1,14 +1,14 @@
-import pokemonStats from "../../modules/pokemon/pokemon.js";
-import pokemonList from "../../modules/finalPokemonList/finalPokemonList.js";
+import pokemonStats from "../../modules/pokemonStats/pokemonStats.js";
+import pokemonList from "../../modules/pokemonList/pokemonList.js";
 import pokedexInfo from "../../modules/info/pokedexInfo.js";
-import renderPokemonCard from "../pokemonCards/pokemonCards.js";
-import unRenderPokemonCard from "../pokemonCards/removePokemonCards.js";
+import renderPokemonCard from "../pokemonCards/renderPokemonCard.js";
+import unRenderPokemonCard from "../pokemonCards/unRenderPokemonCard.js";
 
 const renderPokemonSelector = async () => {
   const list: string[] = await pokemonList();
   let i = 0;
 
-  for (i = 0; i < list.length; i += 1) {
+  for (i; i < list.length; i += 1) {
     // eslint-disable-next-line no-await-in-loop
     const currentPokemon = await pokemonStats(i);
 

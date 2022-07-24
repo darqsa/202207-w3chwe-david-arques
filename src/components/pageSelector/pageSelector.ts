@@ -1,7 +1,7 @@
 import pokedexInfo from "../../modules/info/pokedexInfo.js";
-import renderPokemonCard from "../pokemonCards/pokemonCards.js";
-import unRenderPokemonCard from "../pokemonCards/removePokemonCards.js";
-import renderPokemonSelector from "../pokemonSelector/pokemonSelector.js";
+import renderPokemonCard from "../pokemonCards/renderPokemonCard.js";
+import unRenderPokemonCard from "../pokemonCards/unRenderPokemonCard.js";
+import renderPokemonSelector from "../pokemonSelector/renderPokemonSelector.js";
 
 const pageSelector = () => {
   const previousButton: HTMLElement = document.getElementById("previousButton");
@@ -9,12 +9,12 @@ const pageSelector = () => {
   let page = 0;
 
   const currentPage = () => {
-    const totalPages =
-      pokedexInfo.pokemonList.numberOfPokemon /
-      pokedexInfo.pokemonList.urlOffsetLimit;
     page += 1;
 
-    const currentPageString = `${page}/${totalPages.toFixed()}`;
+    const currentPageString = `${page}/${(
+      pokedexInfo.pokemonList.numberOfPokemon /
+      pokedexInfo.pokemonList.urlOffsetLimit
+    ).toFixed()}`;
 
     return currentPageString;
   };

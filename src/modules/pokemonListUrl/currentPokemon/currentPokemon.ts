@@ -1,4 +1,4 @@
-import pokemonList from "../finalPokemonList/finalPokemonList.js";
+import pokemonList from "../../pokemonList/pokemonList.js";
 
 const currentPokemon = async (current: number) => {
   const list: string[] = await pokemonList();
