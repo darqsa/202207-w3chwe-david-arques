@@ -6,32 +6,57 @@ import renderPokemonSelector from "../pokemonSelector/pokemonSelector.js";
 const pageSelector = () => {
   const previousButton: HTMLElement = document.getElementById("previousButton");
   const nextButton: HTMLElement = document.getElementById("nextButton");
+  let page = 0;
+
+  const currentPage = () => {
+    const totalPages =
+      pokedexInfo.pokemonList.numberOfPokemon /
+      pokedexInfo.pokemonList.urlOffsetLimit;
+    page += 1;
+
+    const currentPageString = `${page}/${totalPages.toFixed()}`;
+
+    return currentPageString;
+  };
+  document.querySelector(".page-selector__actual-page").textContent =
+    currentPage();
+
+  const nextPage = () => {
+    if (
+      pokedexInfo.pokemonList.urlOffset <
+      pokedexInfo.pokemonList.numberOfPokemon -
+        pokedexInfo.pokemonList.urlOffsetLimit
+    ) {
+      nextButton.addEventListener("click", () => {
+        pokedexInfo.pokemonList.urlOffset +=
+          pokedexInfo.pokemonList.urlOffsetLimit;
+        pokedexInfo.pokemonRender.current = 0;
+
+        document.querySelector(".page-selector__actual-page").textContent =
+          currentPage();
+
+        unRenderPokemonCard();
+        renderPokemonCard();
+        renderPokemonSelector();
+      });
+    }
+  };
 
   const previousPage = () => {
-    if (pokedexInfo.pokemonList.urlOffset % 10 === 0) {
+    if (pokedexInfo.pokemonList.urlOffset !== 0) {
       previousButton.addEventListener("click", () => {
-        pokedexInfo.pokemonList.urlOffset += 10;
+        pokedexInfo.pokemonList.urlOffset -=
+          pokedexInfo.pokemonList.urlOffsetLimit;
         pokedexInfo.pokemonRender.current = 0;
+
         unRenderPokemonCard();
-        renderPokemonSelector();
         renderPokemonCard();
+        renderPokemonSelector();
       });
     }
   };
   previousPage();
 
-  const nextPage = () => {
-    if (pokedexInfo.pokemonList.urlOffset % 10 === 0) {
-      nextButton.addEventListener("click", () => {
-        pokedexInfo.pokemonList.urlOffset += 10;
-        pokedexInfo.pokemonRender.current = 0;
-
-        unRenderPokemonCard();
-        renderPokemonCard();
-        renderPokemonSelector();
-      });
-    }
-  };
   nextPage();
 };
 
