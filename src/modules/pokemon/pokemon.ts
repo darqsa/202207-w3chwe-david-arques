@@ -3,6 +3,7 @@ import currentPokemon from "../apiUrls/currentPokemonUrl.js";
 
 const pokemonStats = async (current: number) => {
   const pokemonInfo = await currentPokemon(current);
+
   const pokemon: PokemonInfo = await {
     name: "Bulbasaur",
     id: pokemonInfo.id,
