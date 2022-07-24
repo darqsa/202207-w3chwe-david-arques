@@ -2,6 +2,7 @@ import pokemonStats from "../../modules/pokemon/pokemon.js";
 import pokemonList from "../../modules/finalPokemonList/finalPokemonList.js";
 import pokedexInfo from "../../modules/info/pokedexInfo.js";
 import renderPokemonCard from "../pokemonCards/pokemonCards.js";
+import unRenderPokemonCard from "../pokemonCards/removePokemonCards.js";
 
 const renderPokemonSelector = async () => {
   const list: string[] = await pokemonList();
@@ -21,6 +22,7 @@ const renderPokemonSelector = async () => {
       .querySelector(`#pokemon${i}`)
       .addEventListener("click", async () => {
         pokedexInfo.pokemonRender.current = (currentPokemon.id - 1) % 10;
+        await unRenderPokemonCard();
         await renderPokemonCard();
       });
   }
