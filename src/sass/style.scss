@@ -1,0 +1,15 @@
+@use "components/main/header";
+@use "components/appContainer/appContainer";
+@use "components/main/article";
+@use "components/aside/aside";
+@use "components/main/statistics";
+@use "components/main/navButtons";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  list-style: none;
+}
+html {
+  font-family: "Fira Sans", sans-serif;
+}

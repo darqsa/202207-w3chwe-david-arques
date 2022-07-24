@@ -7,8 +7,8 @@
     "test": "jest src --watchAll",
     "ts-dev": "tsc -w",
     "ts-deploy": "tsc",
-    "local-sass": "npx sass src/sass/style.scss css/style.css --watch",
-    "production-sass": "npx sass src/sass/style.scss css/style.css"
+    "local-sass": "npx sass src/sass/style.scss public/css/style.css --watch",
+    "production-sass": "npx sass src/sass/style.scss public/css/style.css"
   },
   "keywords": [],
   "author": "",

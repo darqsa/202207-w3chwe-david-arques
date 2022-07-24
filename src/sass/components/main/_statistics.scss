@@ -1,0 +1,13 @@
+.card-container {
+  &__statistics-container {
+    height: 250px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+  }
+  &__statistic {
+    font-size: larger;
+  }
+}
