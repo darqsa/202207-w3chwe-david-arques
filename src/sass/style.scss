@@ -4,6 +4,7 @@
 @use "components/aside/aside";
 @use "components/main/statistics";
 @use "components/main/navButtons";
+@use "components/main/main";
 
 * {
   box-sizing: border-box;
@@ -12,4 +13,5 @@
 }
 html {
   font-family: "Fira Sans", sans-serif;
+  background-color: #e0e0e0;
 }

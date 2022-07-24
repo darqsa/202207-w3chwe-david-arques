@@ -1,11 +1,14 @@
 .card-container {
   &__statistics-container {
     height: 250px;
-    padding-top: 25px;
+    padding: 10px 10px 10px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: 20px;
+    background-color: rgba(255, 255, 255, 0.471);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 10%;
   }
   &__statistic {
     font-size: larger;
