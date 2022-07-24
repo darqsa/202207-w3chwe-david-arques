@@ -9,3 +9,20 @@
     max-height: 360px;
   }
 }
+@media (min-width: 700px) {
+  .card-container {
+    padding: 30px;
+    align-content: center;
+    &__images-container {
+      align-self: center;
+    }
+    &__container {
+      flex-direction: row;
+      height: 55vh;
+      gap: 100px;
+    }
+    &__image {
+      max-height: 100%;
+    }
+  }
+}
