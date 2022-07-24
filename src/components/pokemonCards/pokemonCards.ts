@@ -7,7 +7,7 @@ const renderPokemonCard = async () => {
   const pokemonCardHeader = () => {
     const pokemonName = document.createElement("h1");
     document.querySelector(".card-container__header").appendChild(pokemonName);
-    pokemonName.textContent = `#${pokemon.id} - ${pokemon.name}`;
+    pokemonName.textContent = `N.${pokemon.id} - ${pokemon.name}`;
     pokemonName.className = "card-container__pokemon-name";
   };
 

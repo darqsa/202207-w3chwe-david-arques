@@ -1,0 +1,12 @@
+.selector-container {
+  display: flex;
+  flex-direction: row-reverse;
+  max-height: 100%;
+  &__list {
+    padding: 0;
+    max-height: 100%;
+  }
+  &__list-image {
+    height: 75px;
+  }
+}
