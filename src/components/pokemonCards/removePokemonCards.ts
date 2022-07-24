@@ -1,4 +1,4 @@
-const unRenderPokemonCard = async () => {
+const unRenderPokemonCard = () => {
   const pokemonName = document.getElementById("pokemonName");
   const pokemonImage = document.getElementById("pokemonImage");
   const pokemonStat1 = document.getElementById("pokemonStat1");

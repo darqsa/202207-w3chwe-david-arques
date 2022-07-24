@@ -22,8 +22,8 @@ const renderPokemonSelector = async () => {
       .querySelector(`#pokemon${i}`)
       .addEventListener("click", async () => {
         pokedexInfo.pokemonRender.current = (currentPokemon.id - 1) % 10;
-        await unRenderPokemonCard();
-        await renderPokemonCard();
+        unRenderPokemonCard();
+        renderPokemonCard();
       });
   }
 };
